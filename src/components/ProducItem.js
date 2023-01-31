@@ -3,12 +3,17 @@ import NextLink from 'next/link';
 import React from 'react';
 import { urlForThumbnail } from '../utils/image';
 
-export default function ProductItem({ product }) {
+export default function ProductItem({ product, addToCartHandler }) {
     return (
         <Card>
             <NextLink href={`/product/${product.slug.current}`} passHref>
                 <CardActionArea>
-                    <CardMedia component="img" image={urlForThumbnail(product.image)} title={product.name}></CardMedia>
+                    <CardMedia
+                        sx={{ marginTop: 1 }}
+                        component="img"
+                        image={urlForThumbnail(product.image)}
+                        title={product.name}
+                    ></CardMedia>
                     <CardContent>
                         <Typography>{product.name}</Typography>
                         <Typography>
@@ -19,7 +24,7 @@ export default function ProductItem({ product }) {
             </NextLink>
             <CardActions sx={{ marginLeft: 1 }}>
                 <Typography>${product.price}</Typography>
-                <Button size="small" color="primary">
+                <Button size="small" color="primary" onClick={() => addToCartHandler(product)}>
                     Add to cart
                 </Button>
             </CardActions>
