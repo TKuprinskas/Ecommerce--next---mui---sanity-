@@ -17,9 +17,15 @@
     "@mui/material": "^5.11.6",
     "@mui/styles": "^5.11.2",
     "@next/font": "13.1.6",
+    "@sanity/client": "^4.0.1",
+    "@sanity/image-url": "^1.0.2",
+    "axios": "^1.2.6",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "js-cookie": "^3.0.1",
     "next": "13.1.6",
+    "next-connect": "^0.13.0",
+    "notistack": "^2.0.8",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
